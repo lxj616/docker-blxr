@@ -12,6 +12,7 @@ RUN \
   rm -rf app/* && \
   cp -r /BlueLotus_XSSReceiver/* /app && \
   rm -rf /BlueLotus_XSSReceiver && \
+  chmod -R a+rw /app && \
   echo 'session.save_path = "/tmp"' >> /etc/php5/apache2/php.ini 
 
 EXPOSE 80 3306
